@@ -19,7 +19,7 @@ end
 -- game
 
 --[[
- todo
+todo
  * paddle move (add speed with x and maybe only speed for x seconds every y seconds)
  * ball bounce (Angles)
  * ball paddle interaction (Angles)
@@ -27,6 +27,7 @@ end
  * win/lose condition
  * paddle ai
  * menu
+ * sounds [bounce, paddle, score, win, lose, menu]
 --]]
 
 function game_init()
@@ -44,7 +45,7 @@ e={}
   e.h=24
   e.x=123
   e.y=64-(p.h/2)
-  e.s=6
+  e.s=4
 
  b={}
   b.x=64
