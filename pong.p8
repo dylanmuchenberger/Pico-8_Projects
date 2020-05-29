@@ -20,11 +20,11 @@ end
 
 --[[
 todo
- * win/lose condition
  * paddle ai
  * menu
  * sounds [bounce, paddle, score, win, lose, menu]
  * add one button to change ball direction one time
+ * end screen restart game
 --]]
 
 function game_init()
@@ -70,7 +70,7 @@ function enemy()
 end
 
 function ball()
-  if b.x>133 then b.x=64 b.y=64 p.score+=1 end
+  if b.x>133 then b.x=64 b.y=64 p.score+=1 p.h=20-p.score end
   if b.x<-5 then b.x=64 b.y=64 e.score+=1 end
   if b.y+b.h>=102 or b.y<=23 then
     b.sy=~b.sy
@@ -83,10 +83,19 @@ function ball()
   b.y+=b.sy
 end
 
+function winLoseCondition()
+  if (p.score>11) then
+    win_init(true)
+  elseif (e.score>11) then
+    win_init(false)
+  end
+end
+
 function game_update()
   player()
   enemy()
   ball()
+  winLoseCondition()
 end
 
 function game_draw()
@@ -97,6 +106,28 @@ function game_draw()
  rectfill(b.x,b.y,b.x+b.w,b.y+b.h,7)
  print(p.score..'-'..e.score,58,10,7)
 end
+
+-->8
+-- win/lose
+function win_init(state)
+  _update=win_update
+  _draw=win_draw
+  win_state=state
+end
+
+function win_update()
+end
+
+function win_draw()
+  cls()
+  map(0,0,0,0,32,32)
+  if (win_state) then
+    print('you win!',50,55,7)
+  else
+    print('you Lose!',50,55,7)
+  end
+end
+
 __gfx__
 00000000777777770000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
