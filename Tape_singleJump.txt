@@ -5,12 +5,12 @@
 			{
 				"id": "item1592244723676832",
 				"name": "Jumping",
-				"state": ""
+				"state": "priority"
 			},
 			{
 				"id": "item1592244730220598",
 				"name": "collecting coin",
-				"state": ""
+				"state": "priority"
 			},
 			{
 				"id": "item1592244732087245",
@@ -52,7 +52,7 @@
 			{
 				"id": "item1592244718028455",
 				"name": "interface",
-				"state": ""
+				"state": "priority"
 			}
 		],
 		"vis": "true",
@@ -146,17 +146,17 @@
 			{
 				"id": "item1592244571139544",
 				"name": "WORLD 3-3",
-				"state": ""
+				"state": "done"
 			},
 			{
 				"id": "item1592244574387495",
 				"name": "WORLD 3-4",
-				"state": ""
+				"state": "done"
 			},
 			{
 				"id": "item1592244581115231",
 				"name": "WORLD 4-1",
-				"state": ""
+				"state": "done"
 			},
 			{
 				"id": "item1592244584155464",
@@ -166,12 +166,12 @@
 			{
 				"id": "item1592244586871622",
 				"name": "WORLD 4-3",
-				"state": ""
+				"state": "priority"
 			},
 			{
 				"id": "item159224459826702",
 				"name": "WORLD 4-4",
-				"state": ""
+				"state": "working"
 			}
 		],
 		"vis": "true",
